@@ -1,8 +1,8 @@
 
 # John-the-Ripper-Final-Project
 ## Password Auditing and Incident Response using John the Ripper ##
-## **Course** BCYB 644 ##
-## **Student:** Siera Evans ##
+### **Course** BCYB 644 ###
+### Siera Evans ###
 
 ## What is John the Ripper? ##
 Not to be confused with "Jack" the Ripper of course! 
