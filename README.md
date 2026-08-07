@@ -24,9 +24,9 @@ John the Ripper is commonly used by cybersecurity professionals to improve passw
 ## Putting it all Together ##
 After a company experiences a data breach, investigators recover password hashes from a compromised server. They use John the Ripper to determine whether employee passwords were weak enough to be cracked. If many passwords are recovered quickly, the company knows it needs stronger password policies.
 
-## Tool Requirements, Setup, and Workflow ##
+# Tool Requirements, Setup, and Workflow #
 
-# Requirements #
+## Requirements ##
 1. Kali Linux or another Linux distribution
 2. John the Ripper Jumbo edition
 3. Terminal access 
