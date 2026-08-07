@@ -14,7 +14,7 @@ As mentioned previously, John the Ripper is primarily used to detect weak passwo
 ##_Who_ uses John the Ripper?##
 John the Ripper is commonly used by cybersecurity professionals to improve password security, but others include,
 1. System Administrators
-   Specifically IT staff use John the Ripper to audit user passwords and enforce rules for stronger security protocols concerning password creations. 
+   ### _Specifically IT staff use John the Ripper to audit user passwords and enforce rules for stronger security protocols concerning password creations. _ ###
 2. Penetration Testers
 3. Incident Responders
 4. Digital Forensic Analysts
@@ -23,4 +23,20 @@ John the Ripper is commonly used by cybersecurity professionals to improve passw
 ##Putting it all Together##
 After a company experiences a data breach, investigators recover password hashes from a compromised server. They use John the Ripper to determine whether employee passwords were weak enough to be cracked. If many passwords are recovered quickly, the company knows it needs stronger password policies.
 
+### Tool Requirements, Setup, and Workflow ###
+
+##Requirements##
+1. Kali Linux or another Linux distribution
+2. John the Ripper Jumbo edition
+3. Terminal access 
+4. Password hash file
+5. Wordlist (RockYou.txt)
  
+Linux - Provides the environment John the Ripper runs.
+Terminal - Is used to execute John the Ripper commands.
+Hash files - Contain encrypted passwords that John the Ripper can test and attempt to recover.  ex: MD5 hashes, or NTLM hashes
+Wordlist - Provides common passwords for _dictionary attacks_, and is a text file that identifies commonly used passwords and quickly identifies weak or commonly used passwords.
+
+###Lets Start our Workflow!###
+##Step 1. Obtain Password Hashes##
+#What's the Purpose?#
