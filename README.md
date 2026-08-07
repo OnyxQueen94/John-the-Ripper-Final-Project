@@ -12,11 +12,13 @@
 - [Why is John the Ripper Used?](#why-is-john-the-ripper-used)
 - [Who Uses John the Ripper?](#who-uses-john-the-ripper)
 - [Tool Requirements](#tool-requirements-setup-and-workflow)
+- [Installation](#installation)
 - [Workflow](#workflow)
 - [Core Features](#core-features)
 - [Practical Demonstration](#practical-demonstration)
 - [Incident Response Lifecycle](#incident-response-lifecycle)
 - [Strengths and Limitations](#strengths-and-limitations)
+- [Recommendations](#recommendations)
 - [References](#references)
 
 ## _What_ is John the Ripper? ##
