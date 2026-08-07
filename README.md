@@ -5,6 +5,20 @@
 ## Introduction ##
 ### Passwords remain one of the weakest points in cybersecurity. Weak, reused, or easily guessed passwords continue to contribute to data breaches across organizations of all sizes. Security professionals use password auditing tools like **John the Ripper** to identify weak passwords before attackers can exploit them. This project explores the features, capabilities, and real-world applications of John the Ripper through a realistic Incident Response scenario. By the end of this demonstration, readers will understand how password auditing helps organizations strengthen authentication policies and reduce the risk of unauthorized access. ###
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [What is John the Ripper?](#what-is-john-the-ripper)
+- [Why is John the Ripper Used?](#why-is-john-the-ripper-used)
+- [Who Uses John the Ripper?](#who-uses-john-the-ripper)
+- [Tool Requirements](#tool-requirements-setup-and-workflow)
+- [Workflow](#workflow)
+- [Core Features](#core-features)
+- [Practical Demonstration](#practical-demonstration)
+- [Incident Response Lifecycle](#incident-response-lifecycle)
+- [Strengths and Limitations](#strengths-and-limitations)
+- [References](#references)
+
 ## _What_ is John the Ripper? ##
 Not to be confused with "Jack" the Ripper of course! 
 _John the Ripper_ is a free open-source software tool that's used for password security auditing, and password recovery. It's designed to identify weak passwords by attempting to crack password hashes on a network. The software was originally developed for Unix systems however it now supports Windows, macOs, Linux, and hundreds of hash formats.
@@ -39,7 +53,7 @@ After a company experiences a data breach, investigators recover password hashes
 3. Hash files - Contain encrypted passwords that John the Ripper can test and attempt to recover.  ex: MD5 hashes, or NTLM hashes
 4. Wordlist - Provides common passwords for _dictionary attacks_, and is a text file that identifies commonly used passwords and quickly identifies weak or commonly used passwords.
 
-# Lets Start our Workflow! #
+# Workflow! #
 
 # Step 1. Obtain Password Hashes #
 ## What's the Purpose? ##
@@ -54,7 +68,7 @@ To collect password hashes from an authorized source for security testing.
 # Step 2. Identify the Hash Type #
 
 ## What's the Purpose? ##
-To Determine which hashing algorithm was used so John the Ripper can know how to process the password hashes.
+To determine which hashing algorithm was used so John the Ripper can know how to process the password hashes.
 
 ## Common Hash Types ##
 1. MD5
@@ -66,7 +80,7 @@ To Determine which hashing algorithm was used so John the Ripper can know how to
 # Step 3. Select an Attack Method #
 
 ## What's the Purpose? ##
-To Determine which encryption algorithm was used, let's choose the best password recovery technique based on the available information and investigation objectives.
+To determine which encryption algorithm was used, let's choose the best password recovery technique based on the available information and investigation objectives.
 
 The three most common attack methods include:
 
