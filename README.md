@@ -41,12 +41,12 @@ After a company experiences a data breach, investigators recover password hashes
 3. Hash files - Contain encrypted passwords that John the Ripper can test and attempt to recover.  ex: MD5 hashes, or NTLM hashes
 4. Wordlist - Provides common passwords for _dictionary attacks_, and is a text file that identifies commonly used passwords and quickly identifies weak or commonly used passwords.
 
-## Lets Start our Workflow! ##
+# Lets Start our Workflow! #
 ## Step 1 Obtain Password Hashes ##
-# What's the Purpose? #
+## What's the Purpose? ##
 To collect password hashes from an authorized source for security testing.
 
-# Examples Include #
+## Examples Include ##
 1. Linux /etc/shadow
 2. Windows SAM database
 3. Password audit
