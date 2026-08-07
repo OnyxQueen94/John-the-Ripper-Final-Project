@@ -1,6 +1,6 @@
 
 # BCYB644 Siera Evans Final-Project #
-# Password Auditing and Incident Response using 🗡️ John the Ripper #
+# Password Auditing and Incident Response using 🗡️ John the Ripper 🥷🏻 #
 
 ## Introduction ##
 ### Passwords remain one of the weakest points in cybersecurity. Weak, reused, or easily guessed passwords continue to contribute to data breaches across organizations of all sizes. Security professionals use password auditing tools like **John the Ripper** to identify weak passwords before attackers can exploit them. This project explores the features, capabilities, and real-world applications of John the Ripper through a realistic Incident Response scenario. By the end of this demonstration, readers will understand how password auditing helps organizations strengthen authentication policies and reduce the risk of unauthorized access. ###
@@ -66,10 +66,26 @@ To Determine which hashing algorithm was used so John the Ripper can know how to
 # Step 3. Select an Attack Method #
 
 ## What's the Purpose? ##
-To Determine which encryption algorithm was used. Let's choose the most appropriate password recovery technique based on the available information and investigation objectives.
+To Determine which encryption algorithm was used, let's choose the best password recovery technique based on the available information and investigation objectives.
 
 The three most common attack methods include:
 
-1. Dictionary Attack (which we mentioned earlier)
+1. Dictionary Attack (which we mentioned earlier!)
 2. Single Crack Mode
 3. Incremental (Brute Force) Mode
+
+# Practical Demonstration
+
+## Incident Response Scenario
+
+🪼 Jello Financial recently detected unauthorized logins to several employee accounts.
+
+During the investigation, the Incident Response team recovered password hashes from the compromised Linux server.
+
+Management requested a password audit to determine:
+
+- Were employee passwords weak?
+- Could attackers recover them?
+- Which accounts require immediate password resets?
+
+The following demonstration walks through the investigation using John the Ripper.
