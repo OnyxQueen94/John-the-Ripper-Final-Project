@@ -1,9 +1,14 @@
 
-# BCYB644 Siera Evans Final-Project #
-# Password Auditing and Incident Response using 🗡️ John the Ripper 🥷🏻 #
+# 🗡️ John the Ripper
 
-## Introduction ##
-### Passwords remain one of the weakest points in cybersecurity. Weak, reused, or easily guessed passwords continue to contribute to data breaches across organizations of all sizes. Security professionals use password auditing tools like **John the Ripper** to identify weak passwords before attackers can exploit them. This project explores the features, capabilities, and real-world applications of John the Ripper through a realistic Incident Response scenario. By the end of this demonstration, readers will understand how password auditing helps organizations strengthen authentication policies and reduce the risk of unauthorized access. ###
+## Password Auditing and Incident Response
+
+### BCYB644 Final-Project 
+
+Siera Evans
+
+# Introduction 
+Passwords remain one of the weakest points in cybersecurity. Weak, reused, or easily guessed passwords continue to contribute to data breaches across organizations of all sizes. Security professionals use password auditing tools like **John the Ripper** to identify weak passwords before attackers can exploit them. This project explores the features, capabilities, and real-world applications of John the Ripper through a realistic Incident Response scenario. By the end of this demonstration, readers will understand how password auditing helps organizations strengthen authentication policies and reduce the risk of unauthorized access. #
 
 ## Table of Contents
 
@@ -11,8 +16,8 @@
 - [What is John the Ripper?](#what-is-john-the-ripper)
 - [Why is John the Ripper Used?](#why-is-john-the-ripper-used)
 - [Who Uses John the Ripper?](#who-uses-john-the-ripper)
+- [Putting It All Together](#putting-it-all-together)
 - [Tool Requirements](#tool-requirements-setup-and-workflow)
-- [Installation](#installation)
 - [Workflow](#workflow)
 - [Core Features](#core-features)
 - [Practical Demonstration](#practical-demonstration)
@@ -90,18 +95,68 @@ The three most common attack methods include:
 2. Single Crack Mode
 3. Incremental (Brute Force) Mode
 
+The following section explains these features in greater detail before demonstrating how they are used during an Incident Response investigation.
+
+# Core Features
+
+John the Ripper includes several powerful password auditing features that help cybersecurity professionals evaluate password strength, recover passwords, and assess organizational security during authorized security assessments and Incident Response investigations.
+
+The following features will be demonstrated throughout this project.
+ 
+1. Dictionary Attack
+2. Single Crack Mode
+3. Incremental Mode
+4. Multiple Hash Support
+5. Display Recovered Passwords
+6. Session Recovery
+
 # Practical Demonstration
 
 ## Incident Response Scenario
 
-🪼 Jello Financial recently detected unauthorized logins to several employee accounts.
+🪼 **Jello Financial** recently detected unauthorized logins to several employee accounts after suspicious authentication attempts were identified on one of its Linux servers.
 
-During the investigation, the Incident Response team recovered password hashes from the compromised Linux server.
+During the investigation, the Incident Response (IR) team recovered password hashes from the compromised server's `/etc/shadow` file. Although the attackers had not yet recovered the original passwords, management wanted to determine whether the stolen password hashes could be cracked if they fell into the wrong hands.
 
-Management requested a password audit to determine:
+To assess the organization's password security, the Incident Response team selected **John the Ripper** to perform a password audit.
 
-- Were employee passwords weak?
-- Could attackers recover them?
-- Which accounts require immediate password resets?
+---
 
-The following demonstration walks through the investigation using John the Ripper.
+## Investigation Objectives
+
+The objectives of this investigation are to:
+
+- Determine whether employee passwords are vulnerable to password-cracking attacks.
+- Identify accounts requiring immediate password resets.
+- Evaluate the effectiveness of the company's password policy.
+- Recommend improvements to strengthen password security.
+
+## Investigation Timeline
+
+The following investigation was performed in a controlled lab environment.
+
+1. Verify John the Ripper installation.
+2. Generate sample password hashes.
+3. Identify the password hash type.
+4. Perform a Dictionary Attack.
+5. Review recovered passwords.
+6. Analyze the results.
+7. Recommend security improvements.
+
+---
+
+# Incident Response Lifecycle
+
+
+# Strengths and Limitations
+
+
+
+# Recommendations
+
+
+
+# References
+
+
+
