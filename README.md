@@ -40,7 +40,8 @@ After a company experiences a data breach, investigators recover password hashes
 4. Wordlist - Provides common passwords for _dictionary attacks_, and is a text file that identifies commonly used passwords and quickly identifies weak or commonly used passwords.
 
 # Lets Start our Workflow! #
-## Step 1 Obtain Password Hashes ##
+
+# Step 1. Obtain Password Hashes #
 ## What's the Purpose? ##
 To collect password hashes from an authorized source for security testing.
 
@@ -50,19 +51,21 @@ To collect password hashes from an authorized source for security testing.
 3. Password audit
 4. Database backup
 
-## Step 2 Identify the Hash Type ##
-# What's the Purpose? #
+# Step 2. Identify the Hash Type #
+
+## What's the Purpose? ##
 To Determine which hashing algorithm was used so John the Ripper can know how to process the password hashes.
 
-# Common Hash Types #
+## Common Hash Types ##
 1. MD5
 2. SHA-1
 3. SHA-256
 4. NTLM
 5. bcrypt
 
-## Step 3 Select an Attack Method ##
-# What's the Purpose? #
+# Step 3. Select an Attack Method #
+
+## What's the Purpose? ##
 To Determine which encryption algorithm was used. Let's choose the most appropriate password recovery technique based on the available information and investigation objectives.
 
 The three most common attack methods include:
