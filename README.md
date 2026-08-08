@@ -8,7 +8,8 @@
 Siera Evans
 
 # Introduction 
-Passwords remain one of the weakest points in cybersecurity. Weak, reused, or easily guessed passwords continue to contribute to data breaches across organizations of all sizes. Security professionals use password auditing tools like **John the Ripper** to identify weak passwords before attackers can exploit them. This project explores the features, capabilities, and real-world applications of John the Ripper through a realistic Incident Response scenario. By the end of this demonstration, readers will understand how password auditing helps organizations strengthen authentication policies and reduce the risk of unauthorized access. #
+
+Passwords remain one of the weakest points in cybersecurity. Weak, reused, or easily guessed passwords continue to contribute to data breaches across organizations of all sizes. Security professionals use password auditing tools like **John the Ripper** to identify weak passwords before attackers can exploit them. This project explores the features, capabilities, and real-world applications of John the Ripper through a realistic Incident Response scenario. By the end of this demonstration, readers will understand how password auditing helps organizations strengthen authentication policies and reduce the risk of unauthorized access. 
 
 ## Table of Contents
 
@@ -28,13 +29,13 @@ Passwords remain one of the weakest points in cybersecurity. Weak, reused, or ea
 
 ## _What_ is John the Ripper? ##
 Not to be confused with "Jack" the Ripper of course! 
-_John the Ripper_ is a free open-source software tool that's used for password security auditing, and password recovery. It's designed to identify weak passwords by attempting to crack password hashes on a network. The software was originally developed for Unix systems however it now supports Windows, macOs, Linux, and hundreds of hash formats.
+_John the Ripper_ is a free open-source software tool that's used for password security auditing and password recovery. It's designed to identify weak passwords by attempting to crack password hashes on a network. The software was originally developed for Unix systems however, it now supports Windows, macOS, Linux, and hundreds of hash formats.
 
 ## _Why_ is John the Ripper Used? ## 
 As mentioned previously, John the Ripper is primarily used to detect weak passwords _before_ attackers do, and to test an organization's password policies. The software is also used to recover forgotten passwords when _authorized _ and to assist digital forensic and incident response investigations.
 
 ## _Who_ uses John the Ripper? ##
-John the Ripper is commonly used by cybersecurity professionals to improve password security, but others include,
+Cybersecurity professionals commonly use John the Ripper to improve password security, but others include,
 
 ### System Administrators
 - Audit employee passwords.
