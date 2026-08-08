@@ -35,12 +35,23 @@ As mentioned previously, John the Ripper is primarily used to detect weak passwo
 
 ## _Who_ uses John the Ripper? ##
 John the Ripper is commonly used by cybersecurity professionals to improve password security, but others include,
-1. System Administrators
-   ### _Specifically IT staff use John the Ripper to audit user passwords and enforce rules for stronger security protocols concerning password creations._ ###
-2. Penetration Testers
-3. Incident Responders
-4. Digital Forensic Analysts
-   and finally Security Auditors
+
+### System Administrators
+- Audit employee passwords.
+- Enforce password policies.
+- Identify weak passwords
+
+### Penetration Testers
+- Test password strength during security assessments.
+
+### Incident Responders
+- Evaluate compromised password hashes after a breach.
+
+## Digital Forensic Analysts
+- Recover passwords from legally obtained evidence.
+
+## Security Auditors
+- Verify compliance with password policies.
 
 ## Putting it all Together ##
 After a company experiences a data breach, investigators recover password hashes from a compromised server. They use John the Ripper to determine whether employee passwords were weak enough to be cracked. If many passwords are recovered quickly, the company knows it needs stronger password policies.
