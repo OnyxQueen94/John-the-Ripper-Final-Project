@@ -181,6 +181,26 @@ The following investigation was performed in a controlled lab environment.
 
 ---
 
+## Step 1 – Verify John the Ripper Installation
+
+### Objective
+
+Verify that John the Ripper is installed correctly before beginning the password audit.
+
+### Command
+
+```bash
+john --list=build-info
+```
+
+### Explanation
+
+This command displays information about the installed version of John the Ripper, including supported features and password hash formats. Verifying the installation ensures the tool is functioning properly before beginning the investigation.
+
+### Screenshot
+
+`images/john-installed.png`
+
 # Incident Response Lifecycle
 
 
