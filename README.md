@@ -201,6 +201,31 @@ This command displays information about the installed version of John the Ripper
 
 `images/john-installed.png`
 
+## Step 2 – Generate a Sample Password Hash
+
+### Objective
+
+Generate a password hash to simulate credentials recovered during a cybersecurity investigation.
+
+### Password Used
+
+`Password123`
+
+### Command
+
+```bash
+echo -n "Password123" | openssl md5
+```
+
+### Explanation
+
+This command converts the plaintext password into an MD5 hash. During a real incident, investigators recover password hashes rather than plaintext passwords.
+
+### Screenshot
+
+`images/create-md5-hash.png`
+
+
 # Incident Response Lifecycle
 
 
