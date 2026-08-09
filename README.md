@@ -73,17 +73,18 @@ After a company experiences a data breach, investigators recover password hashes
 # Tool Requirements, Setup, and Workflow #
 
 ## Requirements ##
-1. Kali Linux or another Linux distribution
+1. macOS, Linux, or Windows
 2. John the Ripper Jumbo edition
 3. Terminal access 
 4. Password hash file
 5. Wordlist (RockYou.txt)
 
 # _Why?_ # 
-1. Linux - Provides the environment John the Ripper runs.
-2. Terminal - Is used to execute John the Ripper commands.
-3. Hash files - Contain encrypted passwords that John the Ripper can test and attempt to recover.  ex: MD5 hashes, or NTLM hashes
-4. Wordlist - Provides common passwords for _dictionary attacks_, and is a text file that identifies commonly used passwords and quickly identifies weak or commonly used passwords.
+1. John the Ripper supports Windows, macOS, and Linux. This demonstration was performed on macOS using Homebrew.
+2. Linux - Provides the environment John the Ripper runs.
+3. Terminal - Is used to execute John the Ripper commands.
+4. Hash files - Contain encrypted passwords that John the Ripper can test and attempt to recover.  ex: MD5 hashes, or NTLM hashes
+5. Wordlist - Provides common passwords for _dictionary attacks_, and is a text file that identifies commonly used passwords and quickly identifies weak or commonly used passwords.
 
 # Installation
 
@@ -582,6 +583,13 @@ Based on the results of this password audit, the following security recommendati
 - Monitor authentication logs for suspicious login attempts.
 
 
+# Conclusion
+
+This project demonstrated how John the Ripper can be used to perform password auditing and support Incident Response investigations. Beginning with the recovery of a password hash, the investigation identified the hash type, performed a dictionary attack using a custom wordlist, and successfully recovered the original password.
+
+The demonstration highlights the importance of strong password policies and regular password audits. Weak passwords such as **Password123** can be recovered within seconds, emphasizing the need for longer passwords, Multi-Factor Authentication (MFA), password managers, and continuous security awareness training.
+
+John the Ripper remains an effective and widely used tool for authorized password auditing, penetration testing, digital forensics, and Incident Response.
 
 # References
 
