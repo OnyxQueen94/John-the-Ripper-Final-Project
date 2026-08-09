@@ -27,6 +27,19 @@ Passwords remain one of the weakest points in cybersecurity. Weak, reused, or ea
 - [Recommendations](#recommendations)
 - [References](#references)
 
+# Repository Structure
+
+```
+John-the-Ripper-Final-Project/
+│
+├── README.md
+├── images/
+├── sample_hashes/
+├── wordlists/
+├── demo/
+└── references/
+```
+
 # _What_ is John the Ripper? 
 Not to be confused with "Jack" the Ripper of course! 
 _John the Ripper_ is a free open-source software tool that's used for password security auditing and password recovery. It's designed to identify weak passwords by attempting to crack password hashes on a network. The software was originally developed for Unix systems however, it now supports Windows, macOS, Linux, and hundreds of hash formats.
