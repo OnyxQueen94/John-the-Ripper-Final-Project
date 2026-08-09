@@ -489,18 +489,98 @@ The results demonstrate that weak or commonly used passwords can often be recove
 
 If attackers obtained password hashes during a real-world data breach, weak passwords such as **Password123** could be recovered quickly, allowing attackers to gain unauthorized access to sensitive systems and data.
 
+
 # Incident Response Lifecycle
+
+John the Ripper supports multiple phases of the Incident Response Lifecycle by helping security teams identify weak passwords after a security incident.
+
+## 1. Preparation
+
+- Develop strong password policies.
+- Enforce Multi-Factor Authentication (MFA).
+- Conduct regular password audits.
+- Train employees on password security best practices.
+
+## 2. Detection and Analysis
+
+- Detect suspicious login activity.
+- Recover password hashes from compromised systems.
+- Identify the password hash type.
+- Analyze password strength using John the Ripper.
+
+## 3. Containment
+
+- Reset compromised passwords.
+- Disable affected user accounts.
+- Block unauthorized access.
+
+## 4. Eradication
+
+- Remove weak passwords from the environment.
+- Strengthen password policies.
+- Eliminate reused credentials.
+
+## 5. Recovery
+
+- Restore user access using stronger passwords.
+- Enable Multi-Factor Authentication.
+- Verify that compromised accounts are secure.
+
+## 6. Lessons Learned
+
+Following the investigation, organizations should:
+
+- Schedule regular password audits.
+- Encourage the use of password managers.
+- Educate employees on creating strong passwords.
+- Continuously review authentication policies.
 
 
 # Strengths and Limitations
 
+## Strengths
+
+- Free and open-source.
+- Supports hundreds of password hash formats.
+- Fast password recovery using dictionary attacks.
+- Cross-platform support for Windows, macOS, and Linux.
+- Useful for penetration testing, password auditing, and Incident Response.
+- Large cybersecurity community and extensive documentation.
+
+## Limitations
+
+- Can only crack weak passwords within a reasonable amount of time.
+- Strong passwords combined with modern hashing algorithms may take years to recover.
+- Requires authorized access to password hashes.
+- Effectiveness depends on the quality of the wordlist used.
+- Should only be used for authorized security testing.
 
 
 # Recommendations
 
+Based on the results of this password audit, the following security recommendations are made:
+
+- Require passwords to contain at least 14 characters.
+- Enforce Multi-Factor Authentication (MFA) for all users.
+- Prevent password reuse across multiple accounts.
+- Encourage employees to use password managers.
+- Conduct routine password audits using authorized security tools.
+- Provide annual cybersecurity awareness training focused on password security.
+- Monitor authentication logs for suspicious login attempts.
+
 
 
 # References
+
+Openwall. (n.d.). *John the Ripper Password Cracker*. https://www.openwall.com/john/
+
+Openwall. (n.d.). *John the Ripper Documentation*. https://www.openwall.com/john/doc/
+
+MITRE ATT&CK®. (n.d.). *Credential Access*. https://attack.mitre.org/
+
+National Institute of Standards and Technology. (2024). *Digital Identity Guidelines (SP 800-63B).* https://pages.nist.gov/800-63-3/
+
+OWASP Foundation. (n.d.). *Authentication Cheat Sheet*. https://cheatsheetseries.owasp.org/
 
 
 
