@@ -72,6 +72,30 @@ After a company experiences a data breach, investigators recover password hashes
 3. Hash files - Contain encrypted passwords that John the Ripper can test and attempt to recover.  ex: MD5 hashes, or NTLM hashes
 4. Wordlist - Provides common passwords for _dictionary attacks_, and is a text file that identifies commonly used passwords and quickly identifies weak or commonly used passwords.
 
+# Installation
+
+John the Ripper was installed on a MacBook Air using Homebrew.
+
+## Install Homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+## Install John the Ripper
+
+```bash
+brew install john-jumbo
+```
+
+## Verify Installation
+
+```bash
+john --list=build-info
+```
+
+`images/john-installed.png`
+
 # Workflow #
 
 # Step 1. Obtain Password Hashes #
