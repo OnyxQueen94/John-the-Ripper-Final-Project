@@ -420,6 +420,34 @@ Since the hash in this demonstration was created using the `openssl md5` command
 
 Identifying the correct hash type allows John the Ripper to apply the appropriate password-cracking technique. Using the wrong hash type may prevent successful password recovery.
 
+# Step 5 – Perform a Dictionary Attack
+
+## Objective
+
+Determine whether the recovered password hash can be cracked using a dictionary of commonly used passwords.
+
+## Explanation
+
+A Dictionary Attack compares a password hash against a predefined list of commonly used passwords, known as a wordlist. Instead of trying every possible password combination, John the Ripper quickly checks whether the password exists within the wordlist.
+
+For this demonstration, a password dictionary will be used to determine whether the compromised password can be recovered.
+
+## Command
+
+```bash
+john --wordlist=<path-to-wordlist> sample_hashes/md5.txt
+```
+
+*The exact path to the wordlist will depend on where it is stored on the system.*
+
+## Why This Matters
+
+Dictionary attacks demonstrate how quickly weak or commonly used passwords can be recovered after password hashes are stolen during a cybersecurity incident.
+
+## Screenshot
+
+*(To be added after the command is executed.)*
+
 # Incident Response Lifecycle
 
 
