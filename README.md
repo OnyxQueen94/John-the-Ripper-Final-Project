@@ -3,9 +3,9 @@
 
 ## Password Auditing and Incident Response
 
-### BCYB644 Final-Project 
+### BCYB 644 Final Project
 
-Siera Evans
+**Student:** Siera Evans
 
 # Introduction 
 
@@ -27,14 +27,14 @@ Passwords remain one of the weakest points in cybersecurity. Weak, reused, or ea
 - [Recommendations](#recommendations)
 - [References](#references)
 
-## _What_ is John the Ripper? ##
+# _What_ is John the Ripper? 
 Not to be confused with "Jack" the Ripper of course! 
 _John the Ripper_ is a free open-source software tool that's used for password security auditing and password recovery. It's designed to identify weak passwords by attempting to crack password hashes on a network. The software was originally developed for Unix systems however, it now supports Windows, macOS, Linux, and hundreds of hash formats.
 
-## _Why_ is John the Ripper Used? ## 
+# _Why_ is John the Ripper Used? 
 As mentioned previously, John the Ripper is primarily used to detect weak passwords _before_ attackers do, and to test an organization's password policies. The software is also used to recover forgotten passwords when _authorized _ and to assist digital forensic and incident response investigations.
 
-## _Who_ uses John the Ripper? ##
+# _Who_ uses John the Ripper? 
 Cybersecurity professionals commonly use John the Ripper to improve password security, but others include,
 
 ### System Administrators
@@ -54,7 +54,7 @@ Cybersecurity professionals commonly use John the Ripper to improve password sec
 ## Security Auditors
 - Verify compliance with password policies.
 
-## Putting it all Together ##
+# Putting it all Together 
 After a company experiences a data breach, investigators recover password hashes from a compromised server. They use John the Ripper to determine whether employee passwords were weak enough to be cracked. If many passwords are recovered quickly, the company knows it needs stronger password policies.
 
 # Tool Requirements, Setup, and Workflow #
@@ -94,7 +94,7 @@ brew install john-jumbo
 john --list=build-info
 ```
 
-`images/john-installed.png`
+![John the Ripper Installation](images/john-installed.png)
 
 # Workflow #
 
@@ -139,13 +139,136 @@ John the Ripper includes several powerful password auditing features that help c
 
 The following features will be demonstrated throughout this project.
  
-1. Dictionary Attack
-2. Single Crack Mode
-3. Incremental Mode
-4. Multiple Hash Support
-5. Display Recovered Passwords
-6. Session Recovery
+# Core Features
 
+John the Ripper includes several powerful password auditing features that help cybersecurity professionals evaluate password strength, recover passwords, and assess organizational security during authorized security assessments and Incident Response investigations.
+
+---
+
+## 1. Dictionary Attack
+
+### Description
+
+A Dictionary Attack compares password hashes against a wordlist containing millions of commonly used passwords instead of trying every possible password combination.
+
+### Why It Is Important
+
+- Quickly identifies weak passwords.
+- Faster than a brute-force attack.
+- Commonly used during password audits and Incident Response investigations.
+
+### Command
+
+```bash
+john --wordlist=rockyou.txt sample_hashes/md5.txt
+```
+
+### Real-World Example
+
+After a company experiences a data breach, investigators recover password hashes from a compromised server. They use a password dictionary to determine whether employees are using weak passwords that attackers could easily recover.
+
+---
+
+## 2. Single Crack Mode
+
+### Description
+
+Single Crack Mode generates password guesses using information such as usernames, names, or other account details.
+
+### Why It Is Important
+
+- Tests predictable passwords based on user information.
+- Useful when investigating targeted attacks.
+
+### Command
+
+```bash
+john --single sample_hashes/md5.txt
+```
+
+### Real-World Example
+
+An employee named Sarah creates the password **Sarah2026**. John the Ripper can automatically generate similar password guesses using account information.
+
+---
+
+## 3. Incremental (Brute Force) Mode
+
+### Description
+
+Incremental Mode attempts every possible password combination until the correct password is found.
+
+### Why It Is Important
+
+- Can recover passwords that are not found in a dictionary.
+- Useful for testing password strength.
+
+### Command
+
+```bash
+john --incremental sample_hashes/md5.txt
+```
+
+### Real-World Example
+
+A randomly generated password such as **Q7!Lm2@Xp9** is unlikely to appear in a wordlist. Incremental Mode attempts many possible character combinations to recover it, although this process can take much longer.
+
+---
+
+## 4. Multiple Hash Support
+
+### Description
+
+John the Ripper supports hundreds of password hash formats.
+
+### Common Hash Types
+
+- MD5
+- SHA-1
+- SHA-256
+- SHA-512
+- NTLM
+- bcrypt
+
+### Why It Is Important
+
+Different operating systems store passwords using different hashing algorithms. John the Ripper can analyze many of these formats.
+
+---
+
+## 5. Display Recovered Passwords
+
+### Description
+
+Displays any passwords that John the Ripper successfully recovers during the password audit.
+
+### Command
+
+```bash
+john --show sample_hashes/md5.txt
+```
+
+### Why It Is Important
+
+This allows investigators to quickly determine which accounts need immediate password resets.
+
+---
+
+## 6. Session Recovery
+
+### Description
+
+If a password audit is interrupted, John the Ripper can resume from where it stopped.
+
+### Command
+
+```bash
+john --restore
+```
+
+### Why It Is Important
+
+Large password audits may take hours or even days. Session recovery prevents investigators from restarting the entire process if the computer shuts down or the session is interrupted.
 # Practical Demonstration
 
 ## Incident Response Scenario
@@ -167,82 +290,135 @@ The objectives of this investigation are to:
 - Evaluate the effectiveness of the company's password policy.
 - Recommend improvements to strengthen password security.
 
+---
+
 ## Investigation Timeline
 
-The following investigation was performed in a controlled lab environment.
-
 1. Verify John the Ripper installation.
-2. Generate sample password hashes.
-3. Identify the password hash type.
-4. Perform a Dictionary Attack.
-5. Review recovered passwords.
-6. Analyze the results.
-7. Recommend security improvements.
+2. Generate a sample password hash.
+3. Save the password hash.
+4. Identify the password hash type.
+5. Perform a Dictionary Attack.
+6. Review recovered passwords.
+7. Analyze the findings.
+8. Recommend security improvements.
 
 ---
 
-## Step 1 – Verify John the Ripper Installation
+# Step 1 – Verify John the Ripper Installation
 
-### Objective
+## Objective
 
 Verify that John the Ripper is installed correctly before beginning the password audit.
 
-### Command
+## Command
 
 ```bash
 john --list=build-info
 ```
 
-### Explanation
+## Explanation
 
-This command displays information about the installed version of John the Ripper, including supported features and password hash formats. Verifying the installation ensures the tool is functioning properly before beginning the investigation.
+This command displays information about the installed version of John the Ripper, including the build version, supported password hash formats, and available features. Running this command confirms that John the Ripper is installed correctly and ready for use.
 
-### Screenshot
+## Screenshot
 
-`images/john-installed.png`
+![John the Ripper Installation](images/john-installed.png)
 
-## Step 2 – Generate a Sample Password Hash
+## Why This Matters
 
-### Objective
+Before beginning any password audit, security analysts must verify that their tools are functioning properly. Confirming the installation helps prevent errors during an investigation and ensures John the Ripper can successfully process password hashes.
 
-Generate a password hash to simulate credentials recovered during a cybersecurity investigation.
+---
 
-### Password Used
+# Step 2 – Generate a Sample Password Hash
 
-`Password123`
+## Objective
 
-### Command
+Generate a password hash that simulates credentials recovered during a cybersecurity investigation.
+
+## Password Used
+
+```
+Password123
+```
+
+## Command
 
 ```bash
 echo -n "Password123" | openssl md5
 ```
 
-### Explanation
+## Explanation
 
-This command converts the plaintext password into an MD5 hash. During a real incident, investigators recover password hashes rather than plaintext passwords.
+This command converts the plaintext password into an MD5 hash using OpenSSL. During a real-world incident, investigators typically recover password hashes rather than plaintext passwords. Generating a hash allows us to simulate that scenario in a safe lab environment.
 
-### Screenshot
+## Screenshot
 
-`images/create-md5-hash.png`
+![Generate MD5 Hash](images/create-md5-hash.png)
 
-## Step 3 – Save the Password Hash
+## Why This Matters
 
-### Objective
+John the Ripper does not crack plaintext passwords directly. Instead, it analyzes password hashes recovered from compromised systems and attempts to determine the original password.
+
+---
+
+# Step 3 – Save the Password Hash
+
+## Objective
 
 Save the generated password hash into a text file that John the Ripper can analyze.
 
-### File
+## File Created
 
-`sample_hashes/md5.txt`
+```
+sample_hashes/md5.txt
+```
 
-### Explanation
+## Verification Command
 
-Password hashes are commonly recovered from systems such as Linux `/etc/shadow`, Windows SAM databases, or compromised databases. For this demonstration, the generated hash is stored in a text file to simulate recovered credentials.
+```bash
+cat sample_hashes/md5.txt
+```
 
-### Screenshot
+## Explanation
 
-`images/hash-file.png`
+The generated MD5 hash was copied into a file named `md5.txt` inside the `sample_hashes` folder. The `cat` command is used to verify that the file contains the correct hash before beginning the password recovery process.
 
+## Screenshot
+
+![Hash File](images/hash-file.png)
+
+## Why This Matters
+
+During Incident Response investigations, password hashes are commonly recovered from sources such as Linux `/etc/shadow`, Windows SAM databases, or compromised authentication databases. Storing the hash in a text file simulates how investigators prepare evidence for password auditing using John the Ripper.
+
+
+# Step 4 – Identify the Hash Type
+
+## Objective
+
+Identify the hashing algorithm before attempting password recovery.
+
+## Hash Type
+
+MD5
+
+## Explanation
+
+The password hash used in this demonstration was generated using the MD5 hashing algorithm.
+
+Before John the Ripper can attempt password recovery, investigators must identify the type of password hash they are working with. Different operating systems and applications use different hashing algorithms, such as MD5, SHA-256, NTLM, and bcrypt.
+
+Since the hash in this demonstration was created using the `openssl md5` command, its hash type is already known to be MD5.
+
+## Screenshot
+
+![Generate MD5 Hash](images/create-md5-hash.png)
+
+## Why This Matters
+
+Identifying the correct hash type allows John the Ripper to apply the appropriate password-cracking technique. Using the wrong hash type may prevent successful password recovery.
 
 # Incident Response Lifecycle
 
