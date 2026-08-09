@@ -225,6 +225,24 @@ This command converts the plaintext password into an MD5 hash. During a real inc
 
 `images/create-md5-hash.png`
 
+## Step 3 – Save the Password Hash
+
+### Objective
+
+Save the generated password hash into a text file that John the Ripper can analyze.
+
+### File
+
+`sample_hashes/md5.txt`
+
+### Explanation
+
+Password hashes are commonly recovered from systems such as Linux `/etc/shadow`, Windows SAM databases, or compromised databases. For this demonstration, the generated hash is stored in a text file to simulate recovered credentials.
+
+### Screenshot
+
+`images/hash-file.png`
+
 
 # Incident Response Lifecycle
 
