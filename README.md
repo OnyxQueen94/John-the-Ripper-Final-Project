@@ -424,29 +424,70 @@ Identifying the correct hash type allows John the Ripper to apply the appropriat
 
 ## Objective
 
-Determine whether the recovered password hash can be cracked using a dictionary of commonly used passwords.
-
-## Explanation
-
-A Dictionary Attack compares a password hash against a predefined list of commonly used passwords, known as a wordlist. Instead of trying every possible password combination, John the Ripper quickly checks whether the password exists within the wordlist.
-
-For this demonstration, a password dictionary will be used to determine whether the compromised password can be recovered.
+Determine whether the recovered password hash can be cracked using a password dictionary.
 
 ## Command
 
 ```bash
-john --wordlist=<path-to-wordlist> sample_hashes/md5.txt
+john --format=Raw-MD5 --wordlist=wordlists/custom_wordlist.txt sample_hashes/md5.txt
 ```
 
-*The exact path to the wordlist will depend on where it is stored on the system.*
+## Explanation
 
-## Why This Matters
-
-Dictionary attacks demonstrate how quickly weak or commonly used passwords can be recovered after password hashes are stolen during a cybersecurity incident.
+John the Ripper compares the recovered password hash against every password contained in the custom wordlist. When a matching password is found, John successfully recovers the original plaintext password.
 
 ## Screenshot
 
-*(To be added after the command is executed.)*
+![Dictionary Attack](images/dictionary-attack.png)
+
+## Why This Matters
+
+Weak passwords can often be recovered within seconds using a dictionary attack. This demonstrates why organizations should enforce strong password policies and avoid commonly used passwords.
+
+
+# Step 6 – Display the Recovered Password
+
+## Objective
+
+Display any passwords successfully recovered during the password audit.
+
+## Command
+
+```bash
+john --show --format=Raw-MD5 sample_hashes/md5.txt
+```
+
+## Explanation
+
+The `--show` option displays passwords that John the Ripper successfully recovered during the audit. This allows investigators to identify compromised accounts that require immediate password resets.
+
+## Screenshot
+
+![Recovered Password](images/john-show.png)
+
+## Why This Matters
+
+Incident Response teams use recovered passwords to assess the impact of a breach and determine which user accounts should be secured immediately.
+
+
+# Investigation Results
+
+## Findings
+
+The password audit successfully recovered the password **Password123** using a dictionary attack and a custom password wordlist.
+
+The results demonstrate that weak or commonly used passwords can often be recovered within seconds after an attacker obtains password hashes.
+
+## Risks Identified
+
+- Weak password selection.
+- Common password usage.
+- Increased risk of unauthorized access.
+- Potential password reuse across multiple systems.
+
+## Why This Matters
+
+If attackers obtained password hashes during a real-world data breach, weak passwords such as **Password123** could be recovered quickly, allowing attackers to gain unauthorized access to sensitive systems and data.
 
 # Incident Response Lifecycle
 
