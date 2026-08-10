@@ -152,10 +152,6 @@ The following section explains these features in greater detail before demonstra
 John the Ripper includes several powerful password auditing features that help cybersecurity professionals evaluate password strength, recover passwords, and assess organizational security during authorized security assessments and Incident Response investigations.
 
 The following features will be demonstrated throughout this project.
- 
-# Core Features
-
-John the Ripper includes several powerful password auditing features that help cybersecurity professionals evaluate password strength, recover passwords, and assess organizational security during authorized security assessments and Incident Response investigations.
 
 ---
 
