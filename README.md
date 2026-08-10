@@ -1,5 +1,5 @@
 
-# 🗡️ John the Ripper
+# 🗡️ John the Ripper 
 
 ## Password Auditing and Incident Response
 
@@ -8,6 +8,7 @@
 **Student:** Siera Evans
 
 # Introduction 
+![John the Ripper Icon](Images/banner.png)
 
 Passwords remain one of the weakest points in cybersecurity. Weak, reused, or easily guessed passwords continue to contribute to data breaches across organizations of all sizes. Security professionals use password auditing tools like **John the Ripper** to identify weak passwords before attackers can exploit them. This project explores the features, capabilities, and real-world applications of John the Ripper through a realistic Incident Response scenario. By the end of this demonstration, readers will understand how password auditing helps organizations strengthen authentication policies and reduce the risk of unauthorized access. 
 
