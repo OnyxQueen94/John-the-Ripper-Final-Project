@@ -337,7 +337,7 @@ This command displays information about the installed version of John the Ripper
 
 ## Screenshot
 
-![John the Ripper Installation](images/john-installed.png)
+![John the Ripper Installation](Images/john-installed.png)
 
 ## Why This Matters
 
@@ -369,7 +369,7 @@ This command converts the plaintext password into an MD5 hash using OpenSSL. Dur
 
 ## Screenshot
 
-![Generate MD5 Hash](images/create-md5-hash.png)
+![Generate MD5 Hash](Images/create-md5-hash.png)
 
 ## Why This Matters
 
@@ -401,7 +401,7 @@ The generated MD5 hash was copied into a file named `md5.txt` inside the `sample
 
 ## Screenshot
 
-![Hash File](images/hash-file.png)
+![Hash File](Images/hash-file.png)
 
 ## Why This Matters
 
@@ -428,7 +428,7 @@ Since the hash in this demonstration was created using the `openssl md5` command
 
 ## Screenshot
 
-![Generate MD5 Hash](images/create-md5-hash.png)
+![Generate MD5 Hash](Images/create-md5-hash.png)
 
 ## Why This Matters
 
@@ -452,7 +452,7 @@ John the Ripper compares the recovered password hash against every password cont
 
 ## Screenshot
 
-![Dictionary Attack](images/dictionary-attack.png)
+![Dictionary Attack](Images/dictionary-attack.png)
 
 ## Why This Matters
 
@@ -477,7 +477,7 @@ The `--show` option displays passwords that John the Ripper successfully recover
 
 ## Screenshot
 
-![Recovered Password](images/john-show.png)
+![Recovered Password](Images/john-show.png)
 
 ## Why This Matters
 
