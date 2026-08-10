@@ -108,7 +108,7 @@ brew install john-jumbo
 john --list=build-info
 ```
 
-![John the Ripper Installation](images/john-installed.png)
+![John the Ripper Installation](Images/john-installed.png)
 
 # Workflow #
 
